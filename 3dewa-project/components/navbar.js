@@ -10,7 +10,7 @@ export const Navbar = (props) => {
           <div className="w-full relative items-center flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               href="/"
-              className="text-blueGray-700 text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+              className="text-blue-800 text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
               3D EWA
             </Link>
@@ -33,10 +33,31 @@ export const Navbar = (props) => {
             }
             id="example-navbar-warning"
           >
-            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">About Us</li>
-              <li className="flex items-center">Sign In</li>
-              <li className="flex items-center">Payment</li>
+            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto text-blue-800">
+              <Link
+                href="/gallery"
+                className="flex items-center hover:text-purple-600"
+              >
+                Gallery
+              </Link>
+              <Link
+                href="/about"
+                className="flex items-center hover:text-purple-600"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/sign-in"
+                className="flex items-center hover:text-purple-600"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/payment"
+                className="flex items-center hover:bg-blue-800 text-white bg-blue-700 py-1 px-3 rounded"
+              >
+                Payment
+              </Link>
             </ul>
           </div>
         </div>
