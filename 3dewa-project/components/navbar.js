@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useScrollPosition } from "hooks/useScollPosition";
 
 export const Navbar = (props) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [dynamicClass, setDynamicClass] = useState("");
+  const router = useRouter();
+  const scrollPosition = useScrollPosition();
+
+  useEffect(() => {
+    if (router.pathname.includes("about")) {
+      if (scrollPosition > 200) {
+        setDynamicClass("bg-white text-blue-800 shadow");
+      } else {
+        setDynamicClass("bg-transparent text-white");
+      }
+    } else {
+      setDynamicClass("bg-white text-blue-800 shadow");
+    }
+  }, [router.pathname, scrollPosition]);
+
   return (
     <>
-      <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
+      <nav
+        className={`top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg ${dynamicClass}`}
+      >
         <div className="container mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative items-center flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               href="/"
-              className="text-blue-800 text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+              className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
               3D EWA
             </Link>
@@ -33,7 +53,7 @@ export const Navbar = (props) => {
             }
             id="example-navbar-warning"
           >
-            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto text-blue-800">
+            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto">
               <Link
                 href="/gallery"
                 className="flex items-center hover:text-purple-600"

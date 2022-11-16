@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { AboutPage, Navbar } from "components";
+import { AboutPage, Navbar, Footer } from "components";
 
 const About = () => {
   return (
@@ -12,8 +12,11 @@ const About = () => {
       <div>
         <Navbar />
       </div>
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <AboutPage />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
