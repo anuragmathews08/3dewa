@@ -55,10 +55,10 @@ export const Navbar = (props) => {
           >
             <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto">
               <Link
-                href="/gallery"
+                href="/modals"
                 className="flex items-center hover:text-purple-600"
               >
-                Gallery
+                Modals
               </Link>
               <Link
                 href="/about"
@@ -74,7 +74,7 @@ export const Navbar = (props) => {
               </Link>
               <Link
                 href="/payment"
-                className="flex items-center hover:bg-blue-800 text-white bg-blue-700 py-1 px-3 rounded"
+                className="flex items-center hover:bg-blue-800 text-white bg-blue-700 py-1 px-3"
               >
                 Payment
               </Link>

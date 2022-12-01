@@ -1,40 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
+import Image1 from "public/assets/image1.jpg";
 
-export const ProductCard = ({ product }) => {
-  const handle = product.node.handle;
-  const title = product.node.title;
-  const description = product.node.description;
-  const price = product.node.variants.edges[0].node.price;
-
-  const imageNode = product.node.images.edges[0].node;
-
+export const ProductCard = () => {
   return (
-    <Link href={`/products/${handle}`} passHref>
-      <a className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
-        <div className="h-72 border-b-2 border-palette-lighter relative">
+    <Link href="/modals/1" passHref>
+      <div className="h-120 w-72 rounded shadow-xl mx-auto border border-palette-lighter">
+        <div className="h-56 border-b-2 border-palette-lighter relative">
           <Image
-            src={imageNode.originalSrc}
-            alt={imageNode.altText}
+            src={Image1}
+            alt="Product Image"
             layout="fill"
             className="transform duration-500 ease-in-out hover:scale-110"
           />
         </div>
-        <div className="h-48 relative">
-          <div className="font-primary text-palette-primary text-2xl pt-4 px-4 font-semibold">
-            {title}
+        <div className="h-32 relative">
+          <div className="font-primary text-blue-900 text-lg pt-4 pl-4 font-semibold">
+            Drawing room modals
           </div>
-          <div className="text-lg text-gray-600 p-4 font-primary font-light">
-            {description}
+          <div className="text-sm text-gray-600 py-2 pl-4 font-primary font-light">
+            3dsMax 2009 + fbx + obj
+          </div>
+          <div className="text-sm text-gray-600 py-2 pl-4 font-primary font-light">
+            Views: 3200
           </div>
           <div
-            className="text-palette-dark font-primary font-medium text-base absolute bottom-0 right-0 mb-4 pl-8 pr-4 pb-1 pt-2 bg-palette-lighter 
+            className="text-blue-900 font-primary font-medium text-base absolute bottom-0 right-0 mb-4 pl-3 pr-4 py-1 bg-blue-200 
             rounded-tl-sm triangle"
           >
-            <span className="">$95</span>
+            <span className="">Free</span>
           </div>
         </div>
-      </a>
+      </div>
     </Link>
   );
 };
