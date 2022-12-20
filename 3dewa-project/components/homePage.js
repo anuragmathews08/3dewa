@@ -8,7 +8,7 @@ export const HomePage = () => {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                Notus NextJS - A beautiful extension for Tailwind CSS.
+                Image 1500px X 1500px
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                 Notus NextJS is Free and Open Source. It does not change any of
@@ -76,7 +76,7 @@ export const HomePage = () => {
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
-                    Great for your awesome project
+                    Image 700px X 700px
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
                     Putting together a page has never been easier than matching
@@ -315,7 +315,7 @@ export const HomePage = () => {
                   <i className="fas fa-file-alt text-xl"></i>
                 </div>
                 <h3 className="text-3xl font-semibold">
-                  Complex Documentation
+                  Image 1500px X 1500px
                 </h3>
                 <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   This extension comes a lot of fully coded examples that help

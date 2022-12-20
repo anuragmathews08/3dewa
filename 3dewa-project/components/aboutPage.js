@@ -22,7 +22,7 @@ export const AboutPage = () => {
             <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div className="pr-12">
                 <h1 className="text-white font-semibold text-5xl">
-                  Your story starts with us.
+                  Image 1500px X 1500px
                 </h1>
                 <p className="mt-4 text-lg text-blue-200">
                   This is a simple example of a Landing Page you can build using
@@ -144,7 +144,7 @@ export const AboutPage = () => {
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
-                    Top Notch Services
+                    Image 700px X 700px
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
                     The Arctic Ocean freezes every winter and much of the
@@ -193,7 +193,7 @@ export const AboutPage = () => {
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                   <i className="fas fa-rocket text-xl"></i>
                 </div>
-                <h3 className="text-3xl font-semibold">A growing company</h3>
+                <h3 className="text-3xl font-semibold">Image 700px X 700px</h3>
                 <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   The extension comes with three pre-built pages to help you get
                   started faster. You can change the text and images and
